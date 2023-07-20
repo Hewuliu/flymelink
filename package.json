@@ -1,0 +1,15 @@
+{
+  "name": "linkpc_flyme_desktop",
+  "version": "1.0.0",
+  "description": "Just encapsulating the webpage of Flyme linkpc.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "author": "hzz",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^25.3.0"
+  }
+}

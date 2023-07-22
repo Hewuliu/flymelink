@@ -1,15 +1,21 @@
 {
   "name": "linkpc_flyme_desktop",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Just encapsulating the webpage of Flyme linkpc.",
   "main": "main.js",
+  "icon": "logo/logo.ico",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ."
+    "start": "electron .",
+    "package:win": "electron-packager . flymelink --platform=win32 --arch=x64 --electron-version=25.3.0 --overwrite --out ./out --ignore=node-modules --ignore=.gitignore --ignore=.gitattributes --asar --icon=logo/logo.ico",
+    "package:mac": "electron-packager . flymelink --platform=darwin --arch=x64 --electron-version=25.3.0 --overwrite --out ./out --ignore=node-modules --ignore=.gitignore --ignore=.gitattributes --asar --icon=logo/logo.icns",
+    "package:linux": "electron-packager . flymelink --platform=linux --arch=x64 --electron-version=25.3.0 --overwrite --out ./out --ignore=node-modules --ignore=.gitignore --ignore=.gitattributes --asar --icon=logo/logo.ico",
+    "package-all": "npm run package:win & npm run package:mac & npm run package:linux"
   },
   "author": "hzz",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^25.3.0"
+    "electron": "^25.3.0",
+    "electron-packager": "^17.1.1",
+    "npm-build-zip": "^1.0.4"
   }
 }

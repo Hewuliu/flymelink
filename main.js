@@ -10,8 +10,10 @@ function createWindow () {
     const mainWindow = new BrowserWindow({
         // width: 1920,
         // height: 1080,
+        icon: 'logo/logo.ico',
         show : false,
       })
+      mainWindow.setMenu(null)
       mainWindow.maximize()
       mainWindow.show()
       // 本地文件
@@ -19,7 +21,7 @@ function createWindow () {
       // 线上页面
       mainWindow.loadURL('https://linkpc.flyme.com/')
       // 打开控制台
-      mainWindow.webContents.openDevTools()
+      // mainWindow.webContents.openDevTools()
 
 };
 
